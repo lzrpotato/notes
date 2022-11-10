@@ -92,9 +92,12 @@ publishing:
         - root
     writeStubs: false
     siteRootDir: docs
+    ga:
+        tracking: G-VH64NJ4XGS
     seo:
-        title: Dendron
+        title: Zhirui Luo's Study Notes
         description: Personal Knowledge Space
+        author: Zhirui Luo
     github:
         enableEditLink: true
         editLinkText: Edit this page on GitHub
