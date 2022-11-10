@@ -2,11 +2,14 @@
 id: root
 title: root
 desc: ""
-updated: 1668020114455
+updated: 1668107435936
 created: 1595961348801
 ---
 
-This is the root for your Dendron vault.
+# Study Notes
+This is a website for my study notes.
 
-If you decide to publish your entire vault, it will be your landing page. You are free to customize any part of this page except the frontmatter at the top, between the `---`.
-[[leetcode]]
+## Contents
+- [[leetcode]]
+- [[database]]
+- [[designpattern]]
