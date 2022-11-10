@@ -1,13 +1,13 @@
 ---
 id: root
-title: root
+title: Zhirui Luo's Study Notes
 desc: ""
-updated: 1668107435936
+updated: 1668118900608
 created: 1595961348801
 ---
 
-# Study Notes
-This is a website for my study notes.
+# Hi, there!
+## This is a website for my study notes.
 
 ## Contents
 - [[leetcode]]
