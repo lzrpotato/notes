@@ -1,0 +1,142 @@
+<h1 id="complexity">Complexity<a aria-hidden="true" class="anchor-heading icon-link" href="#complexity"></a></h1>
+<p>The efficiency of an algorithm depends on two parameters:</p>
+<ol>
+<li>
+<p>Time complexity: Time Complexity is defined as the number of times a particular instruction set is executed rather than the total time taken.</p>
+</li>
+<li>
+<p>Space complexity: Space Complexity is the total memory space required by the program for its execution. </p>
+</li>
+</ol>
+<p>Both are calculated as the function of input size(n).</p>
+<h2 id="types-of-time-complexity">Types Of Time Complexity:<a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-time-complexity"></a></h2>
+<ol>
+<li>Best Time Complexity</li>
+<li>Average Time Complexity</li>
+<li>Worst Time Complexity</li>
+</ol>
+<h2 id="sorting-algorithm">Sorting Algorithm<a aria-hidden="true" class="anchor-heading icon-link" href="#sorting-algorithm"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Algorithm</th><th></th><th>Time Complexity</th><th></th><th>Space Complexity</th></tr></thead><tbody><tr><td></td><td>Best</td><td>Average</td><td>Worst</td><td>Worst</td></tr><tr><td>Selection Sort</td><td><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ω</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Omega(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">Ω</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></td><td><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Θ</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\Theta(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord">Θ</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></td><td><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>n</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(n^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal">n</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span></td><td>O(1)</td></tr></tbody></table></div>
+<h2 id="bfs-and-dfs">BFS and DFS<a aria-hidden="true" class="anchor-heading icon-link" href="#bfs-and-dfs"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Parameters</th><th>BFS</th><th>DFS</th></tr></thead><tbody><tr><td>1. Stands for</td><td>BFS for Breadth First  Search</td><td>DFS stands for Depth First Search</td></tr><tr><td>2. Data Structure</td><td>BFS uses Queue</td><td>DFS uses stack</td></tr><tr><td>3. Definition</td><td>BFS is a traversal approach in which we first walk through all nodes on the same level before moving on to the next level.</td><td>DFS is also a traversal approach in which the traverse begins at the root node and proceeds through the nodes as far as possible until we reach the node with no unvisited nearby nodes.</td></tr><tr><td>4. Technique</td><td>BFS can be used to find a single source shortest path in an unweighted graph because, in BFS, we reach a vertex with a minimum number of edges from a source vertex.</td><td>In DFS, we might traverse through more edges to reach a destination vertex from a source.</td></tr><tr><td>5. Conceptual Difference</td><td>BFS builds the tree level by level.</td><td>DFS builds the tree sub-tree by sub-tree.</td></tr><tr><td>6. Approach used</td><td>It works on the concept of FIFO (First In First Out).</td><td>It works on the concept of LIFO (Last In First Out).</td></tr><tr><td>7. Suitable for</td><td>BFS is more suitable for searching vertices closer to the given source.</td><td>DFS is more suitable when there are solutions away from source.</td></tr><tr><td>8. Time Complexity</td><td><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>V</mi><mo>+</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(V+E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span></span> when Adjacency List is used and <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>V</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(V^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span> when Adjacency Matrix is used, where V for vertices and E for edges.</td><td><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><mi>V</mi><mo>+</mo><mi>E</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(V+E)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mclose">)</span></span></span></span></span> when Adjacency List is used and <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>O</mi><mo stretchy="false">(</mo><msup><mi>V</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">O(V^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0641em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">O</span><span class="mopen">(</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.22222em;">V</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span> when Adjacency Matrix is used.</td></tr><tr><td>9. Visiting of Siblings/ Children</td><td>Here, siblings are visited before the children.</td><td>Here, children are visited before the siblings.</td></tr><tr><td>10. Removal of Traversed Nodes</td><td>Nodes that are traversed several times are deleted from the queue.</td><td>The visited nodes are added to the stack and then removed when there are no more nodes to visit.</td></tr><tr><td>11. Backtracking</td><td>In BFS there is no concept of backtracking.</td><td>DFS algorithm is a recursive algorithm that uses the idea of backtracking</td></tr><tr><td>12. Applications</td><td>BFS is used in various applications such as bipartite graphs, shortest paths, etc.</td><td>DFS is used in various applications such as acyclic graphs and topological order etc.</td></tr><tr><td>13. Memory</td><td>BFS requires more memory.</td><td>DFS requires less memory.</td></tr><tr><td>14. Optimality</td><td>BFS is optimal for finding the shortest path.</td><td>DFS is not optimal for finding the shortest path.</td></tr><tr><td>15. Space complexity</td><td>In BFS, the space complexity is more critical as compared to time complexity.</td><td>DFS has lesser space complexity because at a time it needs to store only a single path from the root to the leaf node.</td></tr><tr><td>16. Speed</td><td>BFS is slow as compared to DFS.</td><td>DFS is fast as compared to BFS.</td></tr><tr><td>17. When to use?</td><td>When the target is close to the source, BFS performs better.</td><td>When the target is far from the source, DFS is preferable.</td></tr></tbody></table></div>

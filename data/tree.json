@@ -1,0 +1,120 @@
+{
+  "roots": [
+    {
+      "key": "cij49qs329muip03oop0wcu",
+      "title": "Database",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "Dendron",
+      "children": [
+        {
+          "key": "wbpxvctt9swtycdqvefycrw",
+          "title": "Data Access Object (DAO) Pattern",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        },
+        {
+          "key": "qgh5ypgf2ed0blahec22bl7",
+          "title": "ORMs",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        },
+        {
+          "key": "22koji891ve6hz684oj1bir",
+          "title": "ORM vs DAO",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        },
+        {
+          "key": "glteug4lbh4msez8vvsqcwk",
+          "title": "Repository Pattern",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        }
+      ]
+    },
+    {
+      "key": "ohshp0xxd5vn3edsgw59cjq",
+      "title": "Design Patterns",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "Dendron",
+      "children": []
+    },
+    {
+      "key": "lupic2fhrxv5ory6kjlfu08",
+      "title": "Leetcode",
+      "icon": null,
+      "hasTitleNumberOutlined": false,
+      "vaultName": "Dendron",
+      "children": [
+        {
+          "key": "81ae64r5nmt82bq9b1g7sjw",
+          "title": "Complexity",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        },
+        {
+          "key": "0vo6l8eu89f3qkjye0rcdoa",
+          "title": "MergeSort VS QuickSort",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        },
+        {
+          "key": "7d6t0tvikkxwfaiqqhst80n",
+          "title": "Prepare for LeetCode",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        },
+        {
+          "key": "g5b4ul08suha5ogvxzs3pld",
+          "title": "Question List",
+          "icon": null,
+          "hasTitleNumberOutlined": false,
+          "vaultName": "Dendron",
+          "children": []
+        }
+      ]
+    }
+  ],
+  "child2parent": {
+    "cij49qs329muip03oop0wcu": null,
+    "wbpxvctt9swtycdqvefycrw": "cij49qs329muip03oop0wcu",
+    "qgh5ypgf2ed0blahec22bl7": "cij49qs329muip03oop0wcu",
+    "22koji891ve6hz684oj1bir": "cij49qs329muip03oop0wcu",
+    "glteug4lbh4msez8vvsqcwk": "cij49qs329muip03oop0wcu",
+    "ohshp0xxd5vn3edsgw59cjq": null,
+    "lupic2fhrxv5ory6kjlfu08": null,
+    "81ae64r5nmt82bq9b1g7sjw": "lupic2fhrxv5ory6kjlfu08",
+    "0vo6l8eu89f3qkjye0rcdoa": "lupic2fhrxv5ory6kjlfu08",
+    "7d6t0tvikkxwfaiqqhst80n": "lupic2fhrxv5ory6kjlfu08",
+    "g5b4ul08suha5ogvxzs3pld": "lupic2fhrxv5ory6kjlfu08"
+  },
+  "notesLabelById": {
+    "cij49qs329muip03oop0wcu": "Database",
+    "wbpxvctt9swtycdqvefycrw": "Data Access Object (DAO) Pattern",
+    "qgh5ypgf2ed0blahec22bl7": "ORMs",
+    "22koji891ve6hz684oj1bir": "ORM vs DAO",
+    "glteug4lbh4msez8vvsqcwk": "Repository Pattern",
+    "ohshp0xxd5vn3edsgw59cjq": "Design Patterns",
+    "lupic2fhrxv5ory6kjlfu08": "Leetcode",
+    "81ae64r5nmt82bq9b1g7sjw": "Complexity",
+    "0vo6l8eu89f3qkjye0rcdoa": "MergeSort VS QuickSort",
+    "7d6t0tvikkxwfaiqqhst80n": "Prepare for LeetCode",
+    "g5b4ul08suha5ogvxzs3pld": "Question List"
+  }
+}

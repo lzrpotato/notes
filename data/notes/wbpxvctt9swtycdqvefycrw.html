@@ -1,0 +1,71 @@
+<h1 id="data-access-object-dao-pattern">Data Access Object (DAO) Pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#data-access-object-dao-pattern"></a></h1>
+<h2 id="a-design-pattern">A Design Pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#a-design-pattern"></a></h2>
+<p>DAO is a design pattern to minimize coupling between your application and your backend where ORM deals with how to map objects into an object-relational database. This reduce the coupling between the database and your application.</p>
+<p>Potential disadvantages of using DAO include leaky abstraction, code duplication, and abstraction inversion.</p>
+<h2 id="example">Example<a aria-hidden="true" class="anchor-heading icon-link" href="#example"></a></h2>
+<p><a href="https://stackoverflow.com/questions/4037251/dao-vs-ormhibernate-pattern/4037454#4037454">dao-vs-ormhibernate-pattern</a></p>
+<pre class="language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Application</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">private</span> <span class="token class-name">UserDao</span> userDao<span class="token punctuation">;</span>
+
+    <span class="token keyword">public</span> <span class="token class-name">Application</span><span class="token punctuation">(</span><span class="token class-name">UserDao</span> dao<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Get the actual implementation</span>
+        <span class="token comment">// e.g. through dependency injection</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>userDao <span class="token operator">=</span> dao<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">login</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// No matter from where</span>
+        <span class="token class-name">User</span> <span class="token operator">=</span> userDao<span class="token punctuation">.</span><span class="token function">findByUsername</span><span class="token punctuation">(</span><span class="token string">"Dummy"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+
+<span class="token keyword">public</span> <span class="token keyword">interface</span> <span class="token class-name">UserDao</span>
+<span class="token punctuation">{</span>
+    <span class="token class-name">User</span> <span class="token function">findByUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">HibernateUserDao</span> <span class="token keyword">implements</span> <span class="token class-name">UserDao</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">findByUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Do some Hibernate specific stuff</span>
+        <span class="token keyword">this</span><span class="token punctuation">.</span>session<span class="token punctuation">.</span>createQuery<span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">SqlUserDao</span> <span class="token keyword">implements</span> <span class="token class-name">UserDao</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">findByUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token class-name">String</span> query <span class="token operator">=</span> <span class="token string">"SELECT * FROM users WHERE name = '"</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"'"</span><span class="token punctuation">;</span>
+        <span class="token comment">// Execute SQL query and do mapping to the object</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">LdapUserDao</span> <span class="token keyword">implements</span> <span class="token class-name">UserDao</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">findByUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Get this from LDAP directory</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">NoSqlUserDao</span> <span class="token keyword">implements</span> <span class="token class-name">UserDao</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token class-name">User</span> <span class="token function">findByUsername</span><span class="token punctuation">(</span><span class="token class-name">String</span> name<span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token comment">// Do something with e.g. couchdb</span>
+        <span class="token class-name">ViewResults</span> resultAdHoc <span class="token operator">=</span> db<span class="token punctuation">.</span><span class="token function">adhoc</span><span class="token punctuation">(</span><span class="token string">"function (doc) { if (doc.name=='"</span> <span class="token operator">+</span> name <span class="token operator">+</span> <span class="token string">"') { return doc; }}"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">// Map the result document to user</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/notes/cij49qs329muip03oop0wcu">Database</a></li>
+</ul>

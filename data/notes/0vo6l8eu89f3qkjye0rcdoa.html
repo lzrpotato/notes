@@ -1,0 +1,80 @@
+<h1 id="mergesort-vs-quicksort">MergeSort VS QuickSort<a aria-hidden="true" class="anchor-heading icon-link" href="#mergesort-vs-quicksort"></a></h1>
+<p><a href="https://www.geeksforgeeks.org/quick-sort-vs-merge-sort/">merge sort and quick sort</a></p>
+<h2 id="quick-sort">Quick Sort<a aria-hidden="true" class="anchor-heading icon-link" href="#quick-sort"></a></h2>
+<p>Quick sort is an internal algorithm which is based on divide and conquer strategy.</p>
+<ul>
+<li>The array of elements is divided into parts repeatedly until it is not possible to divide it further.</li>
+<li>It is also known as "partition exchange sort"</li>
+<li>It uses a key element (pivot) for partitioning the elements</li>
+<li>One left partition contains all those elements that are smaller than the pivot and one right partition contains all those elements which are greater than the key element. </li>
+</ul>
+<h2 id="merge-sort">Merge Sort<a aria-hidden="true" class="anchor-heading icon-link" href="#merge-sort"></a></h2>
+<p>Merge sort is an external algorithm and based on divide and conquer strategy.</p>
+<ul>
+<li>The elements are split into two sub-arrays (n/2) again and again until only one element is left.</li>
+<li>Merge sort uses additional storage for sorting the auxiliary array.</li>
+<li>Merge sort uses three arrays where two are used for storing each half, and the third external one is used to store the final sorted list by merging other two and each array is then sorted recursively.</li>
+<li>At last, the all sub arrays are merged to make it ‘n’ element size of the array.</li>
+</ul>
+<h2 id="comparison">Comparison<a aria-hidden="true" class="anchor-heading icon-link" href="#comparison"></a></h2>
+<div class="table-responsive">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Basis for comparison</th><th>Quick Sort</th><th>Merge Sort</th></tr></thead><tbody><tr><td>The partition of elements in the array</td><td>The splitting of a array of elements is in any ratio, not necessarily divided into half.</td><td>In the merge sort, the array is parted into just 2 halves (i.e. n/2).</td></tr><tr><td>Worst case complexity</td><td>O(n2)</td><td>O(nlogn)</td></tr><tr><td>Works well on</td><td>It works well on smaller array</td><td>It operates fine on any size of array</td></tr><tr><td>Speed of execution</td><td>It work faster than other sorting algorithms for small data set like Selection sort etc</td><td>It has a consistent speed on any size of data</td></tr><tr><td>Additional storage space requirement</td><td>Less(In-place)</td><td>More(not In-place)</td></tr><tr><td>Efficiency</td><td>Inefficient for larger arrays</td><td>More efficient</td></tr><tr><td>Sorting method</td><td>Internal</td><td>External</td></tr><tr><td>Stability</td><td>Not Stable</td><td>Stable</td></tr><tr><td>Preferred for</td><td>for Arrays</td><td>for Linked Lists</td></tr><tr><td>Locality of reference</td><td>good</td><td>poor</td></tr></tbody></table></div>

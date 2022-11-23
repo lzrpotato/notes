@@ -1,0 +1,16 @@
+<h1 id="repository-pattern">Repository Pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#repository-pattern"></a></h1>
+<h2 id="repository-pattern-1">Repository Pattern<a aria-hidden="true" class="anchor-heading icon-link" href="#repository-pattern-1"></a></h2>
+<p>As per Eric Evans' book <em>Domain-Driven Design</em>, "repository is a mechanism for encapsulating storage, retrieval, and search behavior, which emulates a collection of objects."</p>
+<h2 id="comparing-repository-pattern-with-dao">Comparing Repository Pattern with DAO<a aria-hidden="true" class="anchor-heading icon-link" href="#comparing-repository-pattern-with-dao"></a></h2>
+<p>Their differences <a href="https://www.baeldung.com/java-dao-vs-repository">link</a>:</p>
+<ul>
+<li>DAO is an abstraction of data persistence. However, a repository is an abstraction of a collection of objects</li>
+<li>DAO is a lower-level conecpt, closer to the storage systems. However, repository is a higher-level concept, closer to the Domain objects.</li>
+<li>DAO works as a data mapping/access layer, hiding ugly queries. However, a repository is a layer between domains and data access layers, hiding the complexity of collating data and preparing a domain object </li>
+<li>DAO can't be implemeted using a repository. However, a reoisutirt can use a DAo for accessing underlying storage.</li>
+</ul>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/notes/notes/cij49qs329muip03oop0wcu">Database</a></li>
+</ul>
