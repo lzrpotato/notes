@@ -82,7 +82,7 @@ preview:
     automaticallyShowPreview: false
 publishing:
     assetsPrefix: /notes
-    siteUrl: https://lzrpotato.github.io
+    siteUrl: https://zhiruiluo.github.io
     enableFMTitle: true
     enableNoteTitleForLink: true
     enablePrettyRefs: true
